@@ -1,0 +1,87 @@
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Olimpiada.dll
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Olimpiada.pdb
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Olimpiada.Olimpiada.apk
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Olimpiada.Olimpiada-Signed.apk
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Xamarin.Android.Support.v4.dll
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Location.dll
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Maps.dll
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\Olimpiada.dll
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\Olimpiada.pdb
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\bin\Olimpiada.Olimpiada.apk
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\res\layout\main.xml
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\res\values\strings.xml
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\res\drawable\icon.png
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\R.cs.flag
+c:\users\iohan\documents\visual studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\uploadflags.txt
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\Olimpiada.csprojResolveAssemblyReference.cache
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Olimpiada.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Java.Interop.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\Mono.Android.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\mscorlib.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\System.Core.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\System.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\System.Net.Http.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\System.Runtime.Serialization.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\System.ServiceModel.Internals.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\System.Xml.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\Java.Interop.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\Mono.Android.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\Olimpiada.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Core.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\System.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Net.Http.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\Iohan\Documents\Visual Studio 2015\Projects\Olimpiada\Olimpiada\obj\Debug\Olimpiada.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Olimpiada.dll
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Olimpiada.pdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Olimpiada.Olimpiada.apk
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Olimpiada.Olimpiada-Signed.apk
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Location.dll
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Maps.dll
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.csprojResolveAssemblyReference.cache
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.dll
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.pdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\bin\Olimpiada.Olimpiada.apk
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\layout\main.xml
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\values\strings.xml
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\drawable\icon.png
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\R.cs.flag
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\uploadflags.txt
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Java.Interop.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Mono.Android.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\mscorlib.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Olimpiada.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\System.Core.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\System.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\System.Net.Http.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\System.Runtime.Serialization.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\System.ServiceModel.Internals.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\System.Xml.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\Java.Interop.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\Mono.Android.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\Olimpiada.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Core.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Net.Http.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.dll.mdb
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Olimpiada.dll.mdb
