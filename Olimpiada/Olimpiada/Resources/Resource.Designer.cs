@@ -377,19 +377,22 @@ namespace Olimpiada
 			public const int common_plus_signin_btn_text_light_pressed = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int Icon = 2130837546;
+			public const int cristo = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int places_ic_clear = 2130837547;
+			public const int Icon = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int places_ic_search = 2130837548;
+			public const int places_ic_clear = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int powered_by_google_dark = 2130837549;
+			public const int places_ic_search = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int powered_by_google_light = 2130837550;
+			public const int powered_by_google_dark = 2130837550;
+			
+			// aapt resource value: 0x7f02002f
+			public const int powered_by_google_light = 2130837551;
 			
 			static Drawable()
 			{
