@@ -84,5 +84,6 @@ C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\drawable\cristo.png
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\drawable\pacote.png
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.dll.mdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Olimpiada.dll.mdb
