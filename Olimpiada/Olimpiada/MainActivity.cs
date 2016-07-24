@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,27 +17,22 @@ using Android.Locations;
 namespace Olimpiada
 {
     [Activity(Label = "Olimpiada", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity, IOnMapReadyCallback,ILocationListener
+    public class MainActivity : Activity, IOnMapReadyCallback, ILocationListener
     {
         private GoogleMap map;
 
         private LocationManager locationManager;
         Location currentLocation;
 
-        TextView latitudeLongitudeTextView;
-        TextView addressTextView;
-        TextView distanceTextView;
         string locationProvider;
+
+        bool first = true;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Main);
-
-            latitudeLongitudeTextView = FindViewById<TextView>(Resource.Id.LatitudeLongetude);
-            addressTextView = FindViewById<TextView>(Resource.Id.Address);
-            distanceTextView = FindViewById<TextView>(Resource.Id.Distance);
 
             locationManager = (LocationManager)GetSystemService(LocationService);
             Criteria criteriaForLocationService = new Criteria
@@ -49,7 +44,6 @@ namespace Olimpiada
             locationProvider = locationManager.GetBestProvider(criteriaForLocationService, true);
 
             /*IList<string> acceptableLocationProviders = locationManager.GetProviders(criteriaForLocationService, true);
-
             if(acceptableLocationProviders.Any())
             {
                 locationProvider = acceptableLocationProviders.First();
@@ -58,8 +52,6 @@ namespace Olimpiada
             {
                 locationProvider = string.Empty;
             }*/
-
-            Console.WriteLine("*************" + locationProvider + "*************");
 
             setUpMap();
 
@@ -79,7 +71,7 @@ namespace Olimpiada
 
         private void setUpMap()
         {
-            if(map == null)
+            if (map == null)
             {
                 FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
             }
@@ -88,20 +80,43 @@ namespace Olimpiada
         public void OnMapReady(GoogleMap googleMap)
         {
             map = googleMap;
-            CameraUpdate camera = CameraUpdateFactory.NewLatLngZoom(new LatLng(-22.9109878, -43.7285266),9.5f);
+            CameraUpdate camera = CameraUpdateFactory.NewLatLngZoom(new LatLng(-22.9477901, -43.2293674), 12.35f);
             map.MoveCamera(camera);
             map.UiSettings.ZoomControlsEnabled = true;
+            map.MyLocationEnabled = true;
 
-            BitmapDescriptor btm =BitmapDescriptorFactory.FromResource(Resource.Drawable.Pacote);
+            BitmapDescriptor pacoteOuro = BitmapDescriptorFactory.FromResource(Resource.Drawable.PacoteOuro);
+            BitmapDescriptor pacotePrata = BitmapDescriptorFactory.FromResource(Resource.Drawable.PacotePrata);
+            BitmapDescriptor pacoteBronze = BitmapDescriptorFactory.FromResource(Resource.Drawable.PacoteBronze);
 
-            MarkerOptions options = new MarkerOptions()
+
+            List<MarkerOptions> markers = new List<MarkerOptions>();
+
+            MarkerOptions marker = new MarkerOptions()
                 .SetPosition(new LatLng(-22.951907, -43.210497))
                 .SetTitle("Cristo Redentor")
-                .SetSnippet("Recebendo o Rio de braços abertos")
-                .SetIcon(btm);
+                .SetSnippet("Recebendo o Rio de bra�os abertos")
+                .SetIcon(pacoteOuro);
+            markers.Add(marker);
 
-            map.AddMarker(options);
+            marker = new MarkerOptions()
+                .SetPosition(new LatLng(-22.9044037, -43.2311314))
+                .SetTitle("Jardim Zoologico")
+                .SetIcon(pacotePrata);
+            markers.Add(marker);
 
+            map.MarkerClick += Map_MarkerClick;
+
+            for (int i = 0; i < markers.Count; i++)
+           {
+                map.AddMarker(markers.ElementAt<MarkerOptions>(i));
+           }
+
+        }
+
+        private void Map_MarkerClick(object sender, GoogleMap.MarkerClickEventArgs e)
+        {
+            IsClose(e.Marker.Position.Latitude, e.Marker.Position.Longitude);
         }
 
         public void OnLocationChanged(Location location)
@@ -109,15 +124,15 @@ namespace Olimpiada
             try
             {
                 currentLocation = location;
-                if(currentLocation == null)
+                if (currentLocation == null)
                 {
-                    latitudeLongitudeTextView.Text = "Location not found";
+                    Console.WriteLine("LOCATION NOT FOUND");
                 }
-                else
+                else if(first)
                 {
-                    latitudeLongitudeTextView.Text = String.Format("{0},{1}", currentLocation.Latitude, currentLocation.Longitude);
+                    first = false;
                 }
-
+                /*
                 Android.Locations.Geocoder geocoder = new Geocoder(this);
 
                 IList<Address> addressList = geocoder.GetFromLocation(currentLocation.Latitude, currentLocation.Longitude, 5);
@@ -130,42 +145,45 @@ namespace Olimpiada
                                              Math.Cos(Math.PI / 180.0 * (lat1)) *
                                              Math.Cos(Math.PI / 180.0 * (51.50)) *
                                              Math.Cos(Math.PI / 180.0 * (theta));
-                distanceTextView.Text = "Distance" + distance.ToString() + "miles";
+                //distanceTextView.Text = "Distance" + distance.ToString() + "miles";
 
-                if(address != null)
+                if (address != null)
                 {
                     StringBuilder deviceAddress = new StringBuilder();
-                    for(int i = 0; i < address.MaxAddressLineIndex; i++)
+                    for (int i = 0; i < address.MaxAddressLineIndex; i++)
                     {
                         deviceAddress.Append(address.GetAddressLine(i)).AppendLine(",");
                     }
-                    addressTextView.Text = deviceAddress.ToString();
+                   // addressTextView.Text = deviceAddress.ToString();
                 }
                 else
                 {
-                    addressTextView.Text = "address not found";
-                }
+                   // addressTextView.Text = "address not found";
+                }*/
             }
             catch
             {
-                addressTextView.Text = "address not found";
+                //addressTextView.Text = "address not found";
             }
         }
 
-        public void OnProviderDisabled(string provider)
+        public void OnProviderDisabled(string provider) { }
+
+        public void OnProviderEnabled(string provider) { }
+
+        public void OnStatusChanged(string provider, [GeneratedEnum] Availability status, Bundle extras) { }
+
+        private bool IsClose(double figLat,double figLng)
         {
-           
+            figLat = (Math.PI / 180.0) * figLat;
+            figLng = (Math.PI / 180.0) * figLng;
+            double lat = (Math.PI / 180.0) * currentLocation.Latitude;
+            double lgn = (Math.PI / 180.0) * currentLocation.Longitude;
+            double R = 6372.795477598;
+            double distance = R * Math.Acos((Math.Sin(lat) * Math.Sin(figLat) + Math.Cos(lat) * Math.Cos(figLat) * Math.Cos(lgn - figLng)));
+            Console.WriteLine("Distancia: " + distance + "km");
+            return true;
         }
 
-        public void OnProviderEnabled(string provider)
-        {
-            
-        }
-
-        public void OnStatusChanged(string provider, [GeneratedEnum] Availability status, Bundle extras)
-        {
-            
-        }
     }
 }
-

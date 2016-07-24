@@ -3,28 +3,11 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:text="LatLng"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/LatitudeLongetude"
-        android:layout_marginRight="0.0dp" />
-    <TextView
-        android:text="Location"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Address" />
-    <TextView
-        android:text="Distance"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Distance" />
     <fragment
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.google.android.gms.maps.MapFragment" />
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_marginBottom="0.0dp"
+        android:layout_marginRight="0.0dp" />
 </LinearLayout>

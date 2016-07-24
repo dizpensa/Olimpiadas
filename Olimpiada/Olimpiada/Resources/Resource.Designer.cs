@@ -383,19 +383,25 @@ namespace Olimpiada
 			public const int Icon = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int Pacote = 2130837548;
+			public const int PacoteBronze = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int places_ic_clear = 2130837549;
+			public const int PacoteOuro = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int places_ic_search = 2130837550;
+			public const int PacotePrata = 2130837550;
 			
 			// aapt resource value: 0x7f02002f
-			public const int powered_by_google_dark = 2130837551;
+			public const int places_ic_clear = 2130837551;
 			
 			// aapt resource value: 0x7f020030
-			public const int powered_by_google_light = 2130837552;
+			public const int places_ic_search = 2130837552;
+			
+			// aapt resource value: 0x7f020031
+			public const int powered_by_google_dark = 2130837553;
+			
+			// aapt resource value: 0x7f020032
+			public const int powered_by_google_light = 2130837554;
 			
 			static Drawable()
 			{
@@ -409,15 +415,6 @@ namespace Olimpiada
 		
 		public partial class Id
 		{
-			
-			// aapt resource value: 0x7f08000e
-			public const int Address = 2131230734;
-			
-			// aapt resource value: 0x7f08000f
-			public const int Distance = 2131230735;
-			
-			// aapt resource value: 0x7f08000d
-			public const int LatitudeLongetude = 2131230733;
 			
 			// aapt resource value: 0x7f080005
 			public const int adjust_height = 2131230725;
@@ -440,8 +437,8 @@ namespace Olimpiada
 			// aapt resource value: 0x7f08000c
 			public const int light = 2131230732;
 			
-			// aapt resource value: 0x7f080010
-			public const int map = 2131230736;
+			// aapt resource value: 0x7f08000d
+			public const int map = 2131230733;
 			
 			// aapt resource value: 0x7f080001
 			public const int none = 2131230721;
@@ -449,29 +446,29 @@ namespace Olimpiada
 			// aapt resource value: 0x7f080002
 			public const int normal = 2131230722;
 			
-			// aapt resource value: 0x7f080013
-			public const int place_autocomplete_clear_button = 2131230739;
-			
-			// aapt resource value: 0x7f080015
-			public const int place_autocomplete_powered_by_google = 2131230741;
-			
-			// aapt resource value: 0x7f080017
-			public const int place_autocomplete_prediction_primary_text = 2131230743;
-			
-			// aapt resource value: 0x7f080018
-			public const int place_autocomplete_prediction_secondary_text = 2131230744;
-			
-			// aapt resource value: 0x7f080016
-			public const int place_autocomplete_progress = 2131230742;
-			
-			// aapt resource value: 0x7f080011
-			public const int place_autocomplete_search_button = 2131230737;
+			// aapt resource value: 0x7f080010
+			public const int place_autocomplete_clear_button = 2131230736;
 			
 			// aapt resource value: 0x7f080012
-			public const int place_autocomplete_search_input = 2131230738;
+			public const int place_autocomplete_powered_by_google = 2131230738;
 			
 			// aapt resource value: 0x7f080014
-			public const int place_autocomplete_separator = 2131230740;
+			public const int place_autocomplete_prediction_primary_text = 2131230740;
+			
+			// aapt resource value: 0x7f080015
+			public const int place_autocomplete_prediction_secondary_text = 2131230741;
+			
+			// aapt resource value: 0x7f080013
+			public const int place_autocomplete_progress = 2131230739;
+			
+			// aapt resource value: 0x7f08000e
+			public const int place_autocomplete_search_button = 2131230734;
+			
+			// aapt resource value: 0x7f08000f
+			public const int place_autocomplete_search_input = 2131230735;
+			
+			// aapt resource value: 0x7f080011
+			public const int place_autocomplete_separator = 2131230737;
 			
 			// aapt resource value: 0x7f080003
 			public const int satellite = 2131230723;
