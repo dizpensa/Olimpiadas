@@ -6,7 +6,8 @@ public class MainActivity
 	implements
 		mono.android.IGCUserPeer,
 		com.google.android.gms.maps.OnMapReadyCallback,
-		android.location.LocationListener
+		android.location.LocationListener,
+		com.google.android.gms.maps.GoogleMap.InfoWindowAdapter
 {
 /** @hide */
 	public static final String __md_methods;
@@ -20,6 +21,8 @@ public class MainActivity
 			"n_onProviderDisabled:(Ljava/lang/String;)V:GetOnProviderDisabled_Ljava_lang_String_Handler:Android.Locations.ILocationListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"n_onProviderEnabled:(Ljava/lang/String;)V:GetOnProviderEnabled_Ljava_lang_String_Handler:Android.Locations.ILocationListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"n_onStatusChanged:(Ljava/lang/String;ILandroid/os/Bundle;)V:GetOnStatusChanged_Ljava_lang_String_ILandroid_os_Bundle_Handler:Android.Locations.ILocationListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
+			"n_getInfoContents:(Lcom/google/android/gms/maps/model/Marker;)Landroid/view/View;:GetGetInfoContents_Lcom_google_android_gms_maps_model_Marker_Handler:Android.Gms.Maps.GoogleMap/IInfoWindowAdapterInvoker, Xamarin.GooglePlayServices.Maps\n" +
+			"n_getInfoWindow:(Lcom/google/android/gms/maps/model/Marker;)Landroid/view/View;:GetGetInfoWindow_Lcom_google_android_gms_maps_model_Marker_Handler:Android.Gms.Maps.GoogleMap/IInfoWindowAdapterInvoker, Xamarin.GooglePlayServices.Maps\n" +
 			"";
 		mono.android.Runtime.register ("Olimpiada.MainActivity, Olimpiada, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MainActivity.class, __md_methods);
 	}
@@ -95,6 +98,22 @@ public class MainActivity
 	}
 
 	private native void n_onStatusChanged (java.lang.String p0, int p1, android.os.Bundle p2);
+
+
+	public android.view.View getInfoContents (com.google.android.gms.maps.model.Marker p0)
+	{
+		return n_getInfoContents (p0);
+	}
+
+	private native android.view.View n_getInfoContents (com.google.android.gms.maps.model.Marker p0);
+
+
+	public android.view.View getInfoWindow (com.google.android.gms.maps.model.Marker p0)
+	{
+		return n_getInfoWindow (p0);
+	}
+
+	private native android.view.View n_getInfoWindow (com.google.android.gms.maps.model.Marker p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

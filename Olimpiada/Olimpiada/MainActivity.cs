@@ -12,12 +12,12 @@ using Android.OS;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Locations;
-
+using static Android.Gms.Maps.GoogleMap;
 
 namespace Olimpiada
 {
     [Activity(Label = "Olimpiada", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity, IOnMapReadyCallback, ILocationListener
+    public class MainActivity : Activity, IOnMapReadyCallback, ILocationListener,IInfoWindowAdapter
     {
         private GoogleMap map;
 
@@ -31,8 +31,8 @@ namespace Olimpiada
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
             SetContentView(Resource.Layout.Main);
+            ActionBar.Hide();
 
             locationManager = (LocationManager)GetSystemService(LocationService);
             Criteria criteriaForLocationService = new Criteria
@@ -84,6 +84,7 @@ namespace Olimpiada
             map.MoveCamera(camera);
             map.UiSettings.ZoomControlsEnabled = true;
             map.MyLocationEnabled = true;
+  
 
             BitmapDescriptor pacoteOuro = BitmapDescriptorFactory.FromResource(Resource.Drawable.PacoteOuro);
             BitmapDescriptor pacotePrata = BitmapDescriptorFactory.FromResource(Resource.Drawable.PacotePrata);
@@ -95,28 +96,23 @@ namespace Olimpiada
             MarkerOptions marker = new MarkerOptions()
                 .SetPosition(new LatLng(-22.951907, -43.210497))
                 .SetTitle("Cristo Redentor")
-                .SetSnippet("Recebendo o Rio de braços abertos")
+                .SetSnippet("Dourada")
                 .SetIcon(pacoteOuro);
             markers.Add(marker);
 
             marker = new MarkerOptions()
                 .SetPosition(new LatLng(-22.9044037, -43.2311314))
                 .SetTitle("Jardim Zoologico")
-                .SetIcon(pacotePrata);
+                .SetIcon(pacoteBronze)
+                .SetSnippet("Bronze");
             markers.Add(marker);
 
-            map.MarkerClick += Map_MarkerClick;
-
             for (int i = 0; i < markers.Count; i++)
-           {
+            {
                 map.AddMarker(markers.ElementAt<MarkerOptions>(i));
-           }
+            }
+            map.SetInfoWindowAdapter(this);
 
-        }
-
-        private void Map_MarkerClick(object sender, GoogleMap.MarkerClickEventArgs e)
-        {
-            IsClose(e.Marker.Position.Latitude, e.Marker.Position.Longitude);
         }
 
         public void OnLocationChanged(Location location)
@@ -132,38 +128,10 @@ namespace Olimpiada
                 {
                     first = false;
                 }
-                /*
-                Android.Locations.Geocoder geocoder = new Geocoder(this);
-
-                IList<Address> addressList = geocoder.GetFromLocation(currentLocation.Latitude, currentLocation.Longitude, 5);
-                Address address = addressList.FirstOrDefault();
-
-                double lat1 = currentLocation.Latitude;
-                double theta = currentLocation.Longitude - (-0.13);
-                double distance = Math.Sin(Math.PI / 100.0 * (lat1))
-                                           * Math.Sin(Math.PI / 180.0 * (51.50)) *
-                                             Math.Cos(Math.PI / 180.0 * (lat1)) *
-                                             Math.Cos(Math.PI / 180.0 * (51.50)) *
-                                             Math.Cos(Math.PI / 180.0 * (theta));
-                //distanceTextView.Text = "Distance" + distance.ToString() + "miles";
-
-                if (address != null)
-                {
-                    StringBuilder deviceAddress = new StringBuilder();
-                    for (int i = 0; i < address.MaxAddressLineIndex; i++)
-                    {
-                        deviceAddress.Append(address.GetAddressLine(i)).AppendLine(",");
-                    }
-                   // addressTextView.Text = deviceAddress.ToString();
-                }
-                else
-                {
-                   // addressTextView.Text = "address not found";
-                }*/
             }
             catch
             {
-                //addressTextView.Text = "address not found";
+                Console.WriteLine("ADDRESS NOT FOUND");
             }
         }
 
@@ -173,7 +141,7 @@ namespace Olimpiada
 
         public void OnStatusChanged(string provider, [GeneratedEnum] Availability status, Bundle extras) { }
 
-        private bool IsClose(double figLat,double figLng)
+        private double Distance(double figLat,double figLng)
         {
             figLat = (Math.PI / 180.0) * figLat;
             figLng = (Math.PI / 180.0) * figLng;
@@ -182,8 +150,53 @@ namespace Olimpiada
             double R = 6372.795477598;
             double distance = R * Math.Acos((Math.Sin(lat) * Math.Sin(figLat) + Math.Cos(lat) * Math.Cos(figLat) * Math.Cos(lgn - figLng)));
             Console.WriteLine("Distancia: " + distance + "km");
-            return true;
+            return distance;
         }
 
+        private bool IsClose(LatLng latLgn,double radius)
+        {
+            if(Distance(latLgn.Latitude,latLgn.Longitude) <= radius)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public View GetInfoContents(Marker marker)
+        {
+            return null;
+        }
+
+        public View GetInfoWindow(Marker marker)
+        {
+            View view = LayoutInflater.Inflate(Resource.Layout.figureInfo, null, false);
+            view.Focusable = false;
+            view.Activated = false;
+            if (marker.Snippet.Equals("Dourada"))
+            {
+                view.FindViewById<ImageView>(Resource.Id.figureImage).SetImageResource(Resource.Drawable.PacoteOuro);
+            }
+            else if (marker.Snippet.Equals("Prata"))
+            {
+                view.FindViewById<ImageView>(Resource.Id.figureImage).SetImageResource(Resource.Drawable.PacotePrata);
+            }
+            else
+            {
+                view.FindViewById<ImageView>(Resource.Id.figureImage).SetImageResource(Resource.Drawable.PacoteBronze);
+            }
+            view.FindViewById<TextView>(Resource.Id.figureName).Text = marker.Title;
+            double distance = Distance(marker.Position.Latitude, marker.Position.Longitude);
+            if(distance < 1)
+            {
+                distance *= 1000;
+                view.FindViewById<TextView>(Resource.Id.figureDistance).Text = Math.Round(distance,2).ToString() + "m de distancia";
+            }
+            else
+            {
+                view.FindViewById<TextView>(Resource.Id.figureDistance).Text = Math.Round(distance, 2).ToString() + "Km de distancia";
+            }
+            view.FindViewById<TextView>(Resource.Id.figureKind).Text = marker.Snippet;
+            return view;
+        }
     }
 }
