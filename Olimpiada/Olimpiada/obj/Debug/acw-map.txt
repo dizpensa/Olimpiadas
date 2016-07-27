@@ -1,3 +1,7 @@
+Olimpiada.Album, Olimpiada;md541632e91b1c6ae3b2803268a00bd87a8.Album
+Olimpiada.Album, Olimpiada, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md541632e91b1c6ae3b2803268a00bd87a8.Album
+Olimpiada.Album;md541632e91b1c6ae3b2803268a00bd87a8.Album
+olimpiada.Album;md541632e91b1c6ae3b2803268a00bd87a8.Album
 Olimpiada.MainActivity, Olimpiada;md541632e91b1c6ae3b2803268a00bd87a8.MainActivity
 Olimpiada.MainActivity, Olimpiada, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md541632e91b1c6ae3b2803268a00bd87a8.MainActivity
 Olimpiada.MainActivity;md541632e91b1c6ae3b2803268a00bd87a8.MainActivity

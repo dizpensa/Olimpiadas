@@ -100,6 +100,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "Olimpiada.dll" comes first in this list. */
 		"Olimpiada.dll",
 		"Java.Interop.dll",
+		"Newtonsoft.Json.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.GooglePlayServices.Base.dll",
 		"Xamarin.GooglePlayServices.Basement.dll",

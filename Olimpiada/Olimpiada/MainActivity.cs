@@ -13,6 +13,7 @@ using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Locations;
 using static Android.Gms.Maps.GoogleMap;
+using Newtonsoft.Json;
 
 namespace Olimpiada
 {
@@ -28,6 +29,8 @@ namespace Olimpiada
 
         List<Figure> figures;
 
+        Button albumButton;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -39,14 +42,25 @@ namespace Olimpiada
             locationManager = (LocationManager)GetSystemService(LocationService);
             Criteria criteriaForLocationService = new Criteria
             {
-                Accuracy = Accuracy.Coarse,
+                Accuracy =  Accuracy.Coarse,
                 PowerRequirement = Power.Medium
             };
+
+            albumButton = FindViewById<Button>(Resource.Id.albumButton);
+
+            albumButton.Click += AlbumButton_Click;
 
             locationProvider = locationManager.GetBestProvider(criteriaForLocationService, true);
 
             setUpMap();
 
+        }
+
+        private void AlbumButton_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(Album));
+            intent.PutExtra("figures", JsonConvert.SerializeObject(figures));
+            this.StartActivity(intent);
         }
 
         protected override void OnResume()

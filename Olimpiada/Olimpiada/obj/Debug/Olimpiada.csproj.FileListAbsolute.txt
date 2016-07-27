@@ -90,5 +90,7 @@ C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.csprojResolveAssemblyReference.cache
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\drawable\pacotepego.png
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.dll.mdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Olimpiada.dll.mdb
