@@ -44,7 +44,7 @@
             android:text="Obter figurinha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button1"
+            android:id="@+id/getFigure"
             android:textColor="@android:color/black"
             android:paddingLeft="10.0dp"
             android:background="@android:color/holo_green_light" />

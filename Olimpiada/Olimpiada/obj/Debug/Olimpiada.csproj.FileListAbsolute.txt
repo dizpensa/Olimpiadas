@@ -50,7 +50,6 @@ C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Location.dll
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Xamarin.GooglePlayServices.Maps.dll
-C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.csprojResolveAssemblyReference.cache
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.dll
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.pdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\bin\Olimpiada.Olimpiada.apk
@@ -64,6 +63,7 @@ C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\drawable\pacoteouro.png
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\drawable\pacoteprata.png
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\layout\figureinfo.xml
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\layout\album.xml
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Olimpiada.dll.mdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Mono.Android.dll.mdb
@@ -88,6 +88,7 @@ C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\layout\album.xml
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.csprojResolveAssemblyReference.cache
+C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\res\drawable\pacotepego.png
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\obj\Debug\Olimpiada.dll.mdb
 C:\Users\Iohan\Source\Repos\Olimpiadas\Olimpiadas\Olimpiada\Olimpiada\bin\Debug\Olimpiada.dll.mdb

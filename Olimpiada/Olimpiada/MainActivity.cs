@@ -17,22 +17,24 @@ using static Android.Gms.Maps.GoogleMap;
 namespace Olimpiada
 {
     [Activity(Label = "Olimpiada", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity, IOnMapReadyCallback, ILocationListener,IInfoWindowAdapter
+    public class MainActivity : Activity, IOnMapReadyCallback, ILocationListener,IInfoWindowAdapter, IOnInfoWindowClickListener
     {
         private GoogleMap map;
 
         private LocationManager locationManager;
-        Location currentLocation;
+        Location currentLocation; 
 
         string locationProvider;
 
-        bool first = true;
+        List<Figure> figures;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
             ActionBar.Hide();
+
+            figures = setUpFigures(); 
 
             locationManager = (LocationManager)GetSystemService(LocationService);
             Criteria criteriaForLocationService = new Criteria
@@ -42,16 +44,6 @@ namespace Olimpiada
             };
 
             locationProvider = locationManager.GetBestProvider(criteriaForLocationService, true);
-
-            /*IList<string> acceptableLocationProviders = locationManager.GetProviders(criteriaForLocationService, true);
-            if(acceptableLocationProviders.Any())
-            {
-                locationProvider = acceptableLocationProviders.First();
-            }
-            else
-            {
-                locationProvider = string.Empty;
-            }*/
 
             setUpMap();
 
@@ -77,6 +69,31 @@ namespace Olimpiada
             }
         }
 
+        private List<Figure> setUpFigures()
+        {
+            List<Figure> figures = new List<Figure>();
+            figures.Add(new Figure("Cristo Redentor","ouro", new LatLng(-22.951907, -43.210497)));
+            figures.Add(new Figure("Jardim Zoologico", "bronze", new LatLng(-22.9044037, -43.2311314)));
+            figures.Add(new Figure("Maracanã","prata",new LatLng(-22.9121039, -43.2323445)));
+            figures.Add(new Figure("Parque dos Patins", "prata", new LatLng(-22.9722663, -43.2186377)));
+            figures.Add(new Figure("Quinta da Boa Vista", "bronze", new LatLng(-22.905522, -43.2259774)));
+            figures.Add(new Figure("Jockey Club", "bronze", new LatLng(-22.9745449, -43.2235009)));
+            figures.Add(new Figure("Jardim Botanico", "ouro", new LatLng(-22.9673667, -43.2272268)));
+            figures.Add(new Figure("Planetário da Gávea", "prata", new LatLng(-22.978242, -43.2324218)));
+            figures.Add(new Figure("Parque Lage", "ouro", new LatLng(-22.9603099, -43.2143196)));
+            figures.Add(new Figure("Pedra do Arpoador", "ouro", new LatLng(-22.9901455, -43.1934786)));
+            return figures;
+        }
+
+        public void setUpmarkers()
+        {
+            map.Clear();
+            for (int i = 0; i < figures.Count; i++)
+            {
+                map.AddMarker(figures.ElementAt<Figure>(i).CreateMarker());
+            }
+        }
+
         public void OnMapReady(GoogleMap googleMap)
         {
             map = googleMap;
@@ -84,34 +101,10 @@ namespace Olimpiada
             map.MoveCamera(camera);
             map.UiSettings.ZoomControlsEnabled = true;
             map.MyLocationEnabled = true;
-  
+            setUpmarkers();
 
-            BitmapDescriptor pacoteOuro = BitmapDescriptorFactory.FromResource(Resource.Drawable.PacoteOuro);
-            BitmapDescriptor pacotePrata = BitmapDescriptorFactory.FromResource(Resource.Drawable.PacotePrata);
-            BitmapDescriptor pacoteBronze = BitmapDescriptorFactory.FromResource(Resource.Drawable.PacoteBronze);
-
-
-            List<MarkerOptions> markers = new List<MarkerOptions>();
-
-            MarkerOptions marker = new MarkerOptions()
-                .SetPosition(new LatLng(-22.951907, -43.210497))
-                .SetTitle("Cristo Redentor")
-                .SetSnippet("Dourada")
-                .SetIcon(pacoteOuro);
-            markers.Add(marker);
-
-            marker = new MarkerOptions()
-                .SetPosition(new LatLng(-22.9044037, -43.2311314))
-                .SetTitle("Jardim Zoologico")
-                .SetIcon(pacoteBronze)
-                .SetSnippet("Bronze");
-            markers.Add(marker);
-
-            for (int i = 0; i < markers.Count; i++)
-            {
-                map.AddMarker(markers.ElementAt<MarkerOptions>(i));
-            }
             map.SetInfoWindowAdapter(this);
+            map.SetOnInfoWindowClickListener(this);
 
         }
 
@@ -123,10 +116,6 @@ namespace Olimpiada
                 if (currentLocation == null)
                 {
                     Console.WriteLine("LOCATION NOT FOUND");
-                }
-                else if(first)
-                {
-                    first = false;
                 }
             }
             catch
@@ -149,7 +138,6 @@ namespace Olimpiada
             double lgn = (Math.PI / 180.0) * currentLocation.Longitude;
             double R = 6372.795477598;
             double distance = R * Math.Acos((Math.Sin(lat) * Math.Sin(figLat) + Math.Cos(lat) * Math.Cos(figLat) * Math.Cos(lgn - figLng)));
-            Console.WriteLine("Distancia: " + distance + "km");
             return distance;
         }
 
@@ -169,34 +157,61 @@ namespace Olimpiada
 
         public View GetInfoWindow(Marker marker)
         {
-            View view = LayoutInflater.Inflate(Resource.Layout.figureInfo, null, false);
-            view.Focusable = false;
-            view.Activated = false;
-            if (marker.Snippet.Equals("Dourada"))
+            View view = LayoutInflater.Inflate(Resource.Layout.figureInfo,null,false);
+
+            Figure figure = new Figure("", "", new LatLng(0, 0));
+
+            for (int i =0; i < figures.Count; i++)
             {
-                view.FindViewById<ImageView>(Resource.Id.figureImage).SetImageResource(Resource.Drawable.PacoteOuro);
+                if (figures.ElementAt<Figure>(i).name.Equals(marker.Title))
+                {
+                    figure = figures.ElementAt(i);
+                    break;
+                }
             }
-            else if (marker.Snippet.Equals("Prata"))
-            {
-                view.FindViewById<ImageView>(Resource.Id.figureImage).SetImageResource(Resource.Drawable.PacotePrata);
-            }
-            else
-            {
-                view.FindViewById<ImageView>(Resource.Id.figureImage).SetImageResource(Resource.Drawable.PacoteBronze);
-            }
-            view.FindViewById<TextView>(Resource.Id.figureName).Text = marker.Title;
-            double distance = Distance(marker.Position.Latitude, marker.Position.Longitude);
-            if(distance < 1)
+
+            view.FindViewById<ImageView>(Resource.Id.figureImage).SetImageResource(figure.imageId);
+            view.FindViewById<TextView>(Resource.Id.figureName).Text = figure.name;
+            view.FindViewById<TextView>(Resource.Id.figureKind).Text = figure.kind;
+
+            double distance = Distance(figure.latLgn.Latitude, figure.latLgn.Longitude);
+            if (distance < 1)
             {
                 distance *= 1000;
-                view.FindViewById<TextView>(Resource.Id.figureDistance).Text = Math.Round(distance,2).ToString() + "m de distancia";
+                view.FindViewById<TextView>(Resource.Id.figureDistance).Text = Math.Round(distance, 2).ToString() + "m de distancia";
             }
             else
             {
                 view.FindViewById<TextView>(Resource.Id.figureDistance).Text = Math.Round(distance, 2).ToString() + "Km de distancia";
             }
-            view.FindViewById<TextView>(Resource.Id.figureKind).Text = marker.Snippet;
             return view;
+        }
+
+
+        public void OnInfoWindowClick(Marker marker)
+        {
+            Figure figure = new Figure("", "", new LatLng(0, 0));
+
+            for (int i = 0; i < figures.Count; i++)
+            {
+                if (figures.ElementAt<Figure>(i).name.Equals(marker.Title))
+                {
+                    figure = figures.ElementAt(i);
+                    break;
+                }
+            }
+
+            if (IsClose(figure.latLgn, 0.1))
+            {
+                figure.Get();
+                setUpmarkers();
+            }
+            else
+            {
+                Console.WriteLine("TOO FAR TO GET IT...");
+            }
+
+
         }
     }
 }
