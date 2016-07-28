@@ -17,15 +17,36 @@ namespace Olimpiada
     public class Album : Activity
     {
         List<Figure> figures;
-        TextView element;
+        ListView figuresListView;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.album);
             ActionBar.Hide();
-            element = FindViewById<TextView>(Resource.Id.figuraTextView);
+            figuresListView = FindViewById<ListView>(Resource.Id.listaFigurinhas);
             figures = JsonConvert.DeserializeObject<List<Figure>>(Intent.GetStringExtra("figures"));
-            element.Text = figures.ElementAt<Figure>(0).name +"got: "+figures.ElementAt<Figure>(0).got;
+            List<string> list = new List<string>();
+            for(int i = 0; i < figures.Count; i++)
+            {
+                if (figures.ElementAt(i).got)
+                {
+                    list.Add(figures.ElementAt(i).name + " :  Obtida");
+                }
+                else
+                {
+                    list.Add(figures.ElementAt(i).name + " :  Não Obtida");
+                }
+            }
+            Console.WriteLine("******");
+            for(int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list.ElementAt(i));
+            }
+            
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1,list);
+
+            figuresListView.Adapter = adapter;
+
         }
     }
 }
