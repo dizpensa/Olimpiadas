@@ -101,6 +101,9 @@ class MonoPackageManager_Resources {
 		"Olimpiada.dll",
 		"Java.Interop.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.CurrentActivity.dll",
+		"Plugin.Permissions.Abstractions.dll",
+		"Plugin.Permissions.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.GooglePlayServices.Base.dll",
 		"Xamarin.GooglePlayServices.Basement.dll",
@@ -117,6 +120,8 @@ class MonoPackageManager_Resources {
 		"System.Runtime.Extensions.dll",
 		"System.Reflection.Extensions.dll",
 		"System.ServiceModel.Internals.dll",
+		"System.Resources.ResourceManager.dll",
+		"System.Threading.Tasks.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

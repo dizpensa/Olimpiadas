@@ -17,14 +17,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10.0dp"
-        android:layout_weight="50"
-        android:background="@android:color/holo_green_light">
+        android:layout_weight="50">
         <TextView
             android:text="Nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/figureName"
             android:textColor="@android:color/black"
+            android:background="#0000"
             android:paddingLeft="10.0dp" />
         <TextView
             android:text="Tipo"
@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/figureKind"
             android:textColor="@android:color/black"
+            android:background="#0000"
             android:paddingLeft="10.0dp" />
         <TextView
             android:text="Distancia"
@@ -39,6 +40,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/figureDistance"
             android:textColor="@android:color/black"
+            android:background="#0000"
             android:paddingLeft="10.0dp" />
         <Button
             android:text="Obter figurinha"
@@ -47,6 +49,6 @@
             android:id="@+id/getFigure"
             android:textColor="@android:color/black"
             android:paddingLeft="10.0dp"
-            android:background="@android:color/holo_green_light" />
+            android:background="#0000" />
     </LinearLayout>
 </LinearLayout>

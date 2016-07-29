@@ -569,8 +569,8 @@ namespace Olimpiada
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f060022
-			public const int ApplicationName = 2131099682;
+			// aapt resource value: 0x7f060023
+			public const int ApplicationName = 2131099683;
 			
 			// aapt resource value: 0x7f060021
 			public const int Hello = 2131099681;
@@ -668,8 +668,11 @@ namespace Olimpiada
 			// aapt resource value: 0x7f060020
 			public const int common_signin_button_text_long = 2131099680;
 			
-			// aapt resource value: 0x7f060023
-			public const int google_maps_key = 2131099683;
+			// aapt resource value: 0x7f060024
+			public const int google_maps_key = 2131099684;
+			
+			// aapt resource value: 0x7f060022
+			public const int openCamera = 2131099682;
 			
 			// aapt resource value: 0x7f060001
 			public const int place_autocomplete_clear_button = 2131099649;

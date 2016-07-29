@@ -366,7 +366,7 @@ containing a value of this type.
         public static final int place_autocomplete_progress=0x7f030006;
     }
     public static final class string {
-        public static final int ApplicationName=0x7f060022;
+        public static final int ApplicationName=0x7f060023;
         public static final int Hello=0x7f060021;
         /**  Brand name for Facebook [DO NOT TRANSLATE] 
          */
@@ -474,7 +474,8 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060020;
-        public static final int google_maps_key=0x7f060023;
+        public static final int google_maps_key=0x7f060024;
+        public static final int openCamera=0x7f060022;
         /**  Description of the button that clears the search input when searching for places. 
          */
         public static final int place_autocomplete_clear_button=0x7f060001;

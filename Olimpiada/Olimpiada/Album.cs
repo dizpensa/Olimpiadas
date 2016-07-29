@@ -37,7 +37,6 @@ namespace Olimpiada
                     list.Add(figures.ElementAt(i).name + " :  Não Obtida");
                 }
             }
-            Console.WriteLine("******");
             for(int i = 0; i < list.Count; i++)
             {
                 Console.WriteLine(list.ElementAt(i));

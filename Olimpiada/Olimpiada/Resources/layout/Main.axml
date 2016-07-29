@@ -7,7 +7,8 @@
         android:text="Álbum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/albumButton" />
+        android:id="@+id/albumButton"
+        android:background="@android:color/holo_green_dark" />
     <fragment
         android:id="@+id/map"
         android:layout_width="match_parent"

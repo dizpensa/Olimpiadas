@@ -10,5 +10,6 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listaFigurinhas" />
+        android:id="@+id/listaFigurinhas"
+        android:background="@android:color/holo_green_dark" />
 </LinearLayout>
