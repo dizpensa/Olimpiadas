@@ -325,30 +325,32 @@ containing a value of this type.
     public static final class id {
         public static int adjust_height=0x7f080005;
         public static int adjust_width=0x7f080006;
-        public static int albumButton=0x7f080013;
+        public static int albumButton=0x7f080016;
         public static int auto=0x7f08000a;
         public static int dark=0x7f08000b;
-        public static int figureDistance=0x7f080011;
-        public static int figureImage=0x7f08000e;
-        public static int figureKind=0x7f080010;
-        public static int figureName=0x7f08000f;
-        public static int getFigure=0x7f080012;
+        public static int figureDistance=0x7f080014;
+        public static int figureImage=0x7f080011;
+        public static int figureImageInAlbum1=0x7f08000e;
+        public static int figureKind=0x7f080013;
+        public static int figureKindInAlbum1=0x7f080010;
+        public static int figureName=0x7f080012;
+        public static int figureNameInAlbum1=0x7f08000f;
+        public static int getFigure=0x7f080015;
         public static int hybrid=0x7f080000;
         public static int icon_only=0x7f080007;
-        public static int imagePreview=0x7f080014;
         public static int light=0x7f08000c;
         public static int listaFigurinhas=0x7f08000d;
-        public static int map=0x7f080015;
+        public static int map=0x7f080017;
         public static int none=0x7f080001;
         public static int normal=0x7f080002;
-        public static int place_autocomplete_clear_button=0x7f080018;
-        public static int place_autocomplete_powered_by_google=0x7f08001a;
-        public static int place_autocomplete_prediction_primary_text=0x7f08001c;
-        public static int place_autocomplete_prediction_secondary_text=0x7f08001d;
-        public static int place_autocomplete_progress=0x7f08001b;
-        public static int place_autocomplete_search_button=0x7f080016;
-        public static int place_autocomplete_search_input=0x7f080017;
-        public static int place_autocomplete_separator=0x7f080019;
+        public static int place_autocomplete_clear_button=0x7f08001a;
+        public static int place_autocomplete_powered_by_google=0x7f08001c;
+        public static int place_autocomplete_prediction_primary_text=0x7f08001e;
+        public static int place_autocomplete_prediction_secondary_text=0x7f08001f;
+        public static int place_autocomplete_progress=0x7f08001d;
+        public static int place_autocomplete_search_button=0x7f080018;
+        public static int place_autocomplete_search_input=0x7f080019;
+        public static int place_autocomplete_separator=0x7f08001b;
         public static int satellite=0x7f080003;
         public static int standard=0x7f080008;
         public static int terrain=0x7f080004;
@@ -359,12 +361,13 @@ containing a value of this type.
     }
     public static final class layout {
         public static int album=0x7f030000;
-        public static int figureinfo=0x7f030001;
-        public static int main=0x7f030002;
-        public static int place_autocomplete_fragment=0x7f030003;
-        public static int place_autocomplete_item_powered_by_google=0x7f030004;
-        public static int place_autocomplete_item_prediction=0x7f030005;
-        public static int place_autocomplete_progress=0x7f030006;
+        public static int albumrow=0x7f030001;
+        public static int figureinfo=0x7f030002;
+        public static int main=0x7f030003;
+        public static int place_autocomplete_fragment=0x7f030004;
+        public static int place_autocomplete_item_powered_by_google=0x7f030005;
+        public static int place_autocomplete_item_prediction=0x7f030006;
+        public static int place_autocomplete_progress=0x7f030007;
     }
     public static final class string {
         public static int ApplicationName=0x7f060023;

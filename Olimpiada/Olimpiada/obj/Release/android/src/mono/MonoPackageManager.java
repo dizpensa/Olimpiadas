@@ -102,14 +102,11 @@ class MonoPackageManager_Resources {
 		"Java.Interop.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.CurrentActivity.dll",
-		"Plugin.Permissions.Abstractions.dll",
-		"Plugin.Permissions.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.GooglePlayServices.Base.dll",
 		"Xamarin.GooglePlayServices.Basement.dll",
 		"Xamarin.GooglePlayServices.Location.dll",
 		"Xamarin.GooglePlayServices.Maps.dll",
-		"System.ServiceModel.Internals.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

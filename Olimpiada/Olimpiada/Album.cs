@@ -24,28 +24,19 @@ namespace Olimpiada
             SetContentView(Resource.Layout.album);
             ActionBar.Hide();
             figuresListView = FindViewById<ListView>(Resource.Id.listaFigurinhas);
-            figures = JsonConvert.DeserializeObject<List<Figure>>(Intent.GetStringExtra("figures"));
-            List<string> list = new List<string>();
-            for(int i = 0; i < figures.Count; i++)
+            try
             {
-                if (figures.ElementAt(i).got)
-                {
-                    list.Add(figures.ElementAt(i).name + " :  Obtida");
-                }
-                else
-                {
-                    list.Add(figures.ElementAt(i).name + " :  Não Obtida");
-                }
+                figures = JsonConvert.DeserializeObject<List<Figure>>(Intent.GetStringExtra("figures"));
+
+                AlbumListViewAdapter adapter = new AlbumListViewAdapter(this, figures);
+
+                figuresListView.Adapter = adapter;
             }
-            for(int i = 0; i < list.Count; i++)
+            catch
             {
-                Console.WriteLine(list.ElementAt(i));
+                Toast.MakeText(ApplicationContext, "Puta que pariu", ToastLength.Short)
+                       .Show();
             }
-            
-            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1,list);
-
-            figuresListView.Adapter = adapter;
-
         }
     }
 }

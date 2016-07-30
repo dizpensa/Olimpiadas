@@ -1,12 +1,14 @@
 using Android.Gms.Maps.Model;
 using Android.Graphics;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace Olimpiada
-{   [Serializable]
+{
+    [Serializable]
     class Figure
     {
         public MarkerOptions marker { get; set; }
@@ -27,17 +29,17 @@ namespace Olimpiada
             this.categories = categories;
             if(kind == "ouro")
             {
-                image = BitmapDescriptorFactory.FromResource(Resource.Drawable.PacoteOuro);
+    //            image = BitmapDescriptorFactory.FromResource(Resource.Drawable.PacoteOuro);
                 imageId = Resource.Drawable.PacoteOuro;
             }
             else if(kind == "prata")
             {
-                image = BitmapDescriptorFactory.FromResource( Resource.Drawable.PacotePrata);
+  //              image = BitmapDescriptorFactory.FromResource( Resource.Drawable.PacotePrata);
                 imageId = Resource.Drawable.PacotePrata;
             }
             else
             {
-                image = BitmapDescriptorFactory.FromResource( Resource.Drawable.PacoteBronze);
+//                image = BitmapDescriptorFactory.FromResource( Resource.Drawable.PacoteBronze);
                 imageId = Resource.Drawable.PacoteBronze;
             }
         }
@@ -55,7 +57,7 @@ namespace Olimpiada
                 .SetPosition(latLgn)
                 .SetTitle(name)
                 .SetSnippet(kind)
-                .SetIcon(image);
+                .SetIcon(BitmapDescriptorFactory.FromResource(imageId));
             return marker;
         }
     }

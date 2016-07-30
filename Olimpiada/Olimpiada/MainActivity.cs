@@ -37,7 +37,7 @@ namespace Olimpiada
 
         Button albumButton;
 
-        Bitmap currentFigureImage;
+        Figure currentFigure;
 
         int CAMERA_CAPTURE_IMAGE_REQUEST_CODE = 100;
         string IMAGE_DIRECTORY_NAME = "Photos";
@@ -48,7 +48,6 @@ namespace Olimpiada
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
             ActionBar.Hide();
-
             /*ISharedPreferences pref = Application.Context.GetSharedPreferences("AppInfo", FileCreationMode.Private);
             string tempFigures = pref.GetString("Figures", string.Empty);
 
@@ -109,7 +108,7 @@ namespace Olimpiada
         private List<Figure> setUpFigures()
         {
             List<Figure> figures = new List<Figure>();
-           // figures.Add(new Figure("Casa", "ouro", new LatLng(-22.904329, -43.3007853), new List<string> { "" }));
+            figures.Add(new Figure("Casa", "ouro", new LatLng(-22.90507960670977, -43.287882399999944), new List<string> { "" }));
             figures.Add(new Figure("Cristo Redentor", "ouro", new LatLng(-22.951907, -43.210497), new List<string> { "tradicional", "paisagem" }));
             figures.Add(new Figure("Jardim Zoologico", "bronze", new LatLng(-22.9044037, -43.2311314), new List<string> { "parque" }));
             figures.Add(new Figure("Maracanã", "prata", new LatLng(-22.9121039, -43.2323445), new List<string> { "tradicional", "esporte" }));
@@ -211,21 +210,29 @@ namespace Olimpiada
             view.FindViewById<ImageView>(Resource.Id.figureImage).SetImageResource(figure.imageId);
             view.FindViewById<TextView>(Resource.Id.figureName).Text = figure.name;
             view.FindViewById<TextView>(Resource.Id.figureKind).Text = figure.kind;
-
-            double distance = Distance(figure.latLgn.Latitude, figure.latLgn.Longitude);
-            if (!IsClose(figure.latLgn, 0.1))
+            if (currentLocation == null)
             {
                 view.FindViewById<Button>(Resource.Id.getFigure).Text = "Informações";
                 view.SetBackgroundColor(Android.Graphics.Color.LightGray);
-            }
-            if (distance < 1)
-            {
-                distance *= 1000;
-                view.FindViewById<TextView>(Resource.Id.figureDistance).Text = Math.Round(distance, 2).ToString() + "m de distancia";
+                view.FindViewById<TextView>(Resource.Id.figureDistance).Text = "Não foi possivel obter localização";
             }
             else
             {
-                view.FindViewById<TextView>(Resource.Id.figureDistance).Text = Math.Round(distance, 2).ToString() + "Km de distancia";
+                double distance = Distance(figure.latLgn.Latitude, figure.latLgn.Longitude);
+                if (!IsClose(figure.latLgn, 0.5))
+                {
+                    view.FindViewById<Button>(Resource.Id.getFigure).Text = "Informações";
+                    view.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                }
+                if (distance < 1)
+                {
+                    distance *= 1000;
+                    view.FindViewById<TextView>(Resource.Id.figureDistance).Text = Math.Round(distance, 2).ToString() + "m de distancia";
+                }
+                else
+                {
+                    view.FindViewById<TextView>(Resource.Id.figureDistance).Text = Math.Round(distance, 2).ToString() + "Km de distancia";
+                }
             }
             return view;
         }
@@ -249,16 +256,11 @@ namespace Olimpiada
                 }
             }
 
-            if (IsClose(figure.latLgn, 0.1))
+            if (currentLocation != null && IsClose(figure.latLgn, 0.5))
             {
                 figure.Get();
-                setUpmarkers();
                 takePhoto();
-                if (currentFigureImage != null)
-                {
-                    figure.image = BitmapDescriptorFactory.FromBitmap(currentFigureImage);
-                    currentFigureImage = null;
-                }
+                setUpmarkers();
             }
             else
             {
@@ -334,6 +336,8 @@ namespace Olimpiada
                 {
                     // DESPLEGAMOS LA IMAGEN QUE CAPTURAMOS DE NUESTRA FOTO
                     previewCapturedImage();
+                    Toast.MakeText(this.ApplicationContext, fileUri.Path, ToastLength.Short)
+                        .Show();
                 }
                 else if (resultCode == Result.Canceled)
                 {
@@ -362,7 +366,8 @@ namespace Olimpiada
             Bitmap bitmap = BitmapFactory.DecodeFile(fileUri.Path, options);
             //LE ASIGNAMOS EL BITMAP A NUESTRO CONTROL IMAGE
             //imgPreview.SetImageBitmap(bitmap);
-            currentFigureImage = bitmap;
+            //currentFigure.image = BitmapDescriptorFactory.FromBitmap(bitmap);
+            //setUpmarkers();
         }
 
     }

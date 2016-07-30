@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Olimpiada.Olimpiada" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Olimpiada.Olimpiada" android:versionCode="1" android:versionName="0.1" android:installLocation="auto">
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="16" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -10,7 +10,7 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-feature android:glEsVersion="0x00020000" android:required="true" />
-  <application android:label="Olimpiada" android:name="md541632e91b1c6ae3b2803268a00bd87a8.MainApplication" android:allowBackup="true" android:debuggable="true">
+  <application android:label="Álbum Rio" android:icon="@drawable/pacoteouro" android:name="md541632e91b1c6ae3b2803268a00bd87a8.MainApplication" android:allowBackup="true" android:debuggable="true">
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/google_maps_key" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />

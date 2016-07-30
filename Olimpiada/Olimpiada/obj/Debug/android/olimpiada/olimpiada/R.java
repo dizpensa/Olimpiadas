@@ -325,29 +325,32 @@ containing a value of this type.
     public static final class id {
         public static final int adjust_height=0x7f080005;
         public static final int adjust_width=0x7f080006;
-        public static final int albumButton=0x7f080013;
+        public static final int albumButton=0x7f080016;
         public static final int auto=0x7f08000a;
         public static final int dark=0x7f08000b;
-        public static final int figureDistance=0x7f080011;
-        public static final int figureImage=0x7f08000e;
-        public static final int figureKind=0x7f080010;
-        public static final int figureName=0x7f08000f;
-        public static final int getFigure=0x7f080012;
+        public static final int figureDistance=0x7f080014;
+        public static final int figureImage=0x7f080011;
+        public static final int figureImageInAlbum1=0x7f08000e;
+        public static final int figureKind=0x7f080013;
+        public static final int figureKindInAlbum1=0x7f080010;
+        public static final int figureName=0x7f080012;
+        public static final int figureNameInAlbum1=0x7f08000f;
+        public static final int getFigure=0x7f080015;
         public static final int hybrid=0x7f080000;
         public static final int icon_only=0x7f080007;
         public static final int light=0x7f08000c;
         public static final int listaFigurinhas=0x7f08000d;
-        public static final int map=0x7f080014;
+        public static final int map=0x7f080017;
         public static final int none=0x7f080001;
         public static final int normal=0x7f080002;
-        public static final int place_autocomplete_clear_button=0x7f080017;
-        public static final int place_autocomplete_powered_by_google=0x7f080019;
-        public static final int place_autocomplete_prediction_primary_text=0x7f08001b;
-        public static final int place_autocomplete_prediction_secondary_text=0x7f08001c;
-        public static final int place_autocomplete_progress=0x7f08001a;
-        public static final int place_autocomplete_search_button=0x7f080015;
-        public static final int place_autocomplete_search_input=0x7f080016;
-        public static final int place_autocomplete_separator=0x7f080018;
+        public static final int place_autocomplete_clear_button=0x7f08001a;
+        public static final int place_autocomplete_powered_by_google=0x7f08001c;
+        public static final int place_autocomplete_prediction_primary_text=0x7f08001e;
+        public static final int place_autocomplete_prediction_secondary_text=0x7f08001f;
+        public static final int place_autocomplete_progress=0x7f08001d;
+        public static final int place_autocomplete_search_button=0x7f080018;
+        public static final int place_autocomplete_search_input=0x7f080019;
+        public static final int place_autocomplete_separator=0x7f08001b;
         public static final int satellite=0x7f080003;
         public static final int standard=0x7f080008;
         public static final int terrain=0x7f080004;
@@ -358,12 +361,13 @@ containing a value of this type.
     }
     public static final class layout {
         public static final int album=0x7f030000;
-        public static final int figureinfo=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int place_autocomplete_fragment=0x7f030003;
-        public static final int place_autocomplete_item_powered_by_google=0x7f030004;
-        public static final int place_autocomplete_item_prediction=0x7f030005;
-        public static final int place_autocomplete_progress=0x7f030006;
+        public static final int albumrow=0x7f030001;
+        public static final int figureinfo=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int place_autocomplete_fragment=0x7f030004;
+        public static final int place_autocomplete_item_powered_by_google=0x7f030005;
+        public static final int place_autocomplete_item_prediction=0x7f030006;
+        public static final int place_autocomplete_progress=0x7f030007;
     }
     public static final class string {
         public static final int ApplicationName=0x7f060023;
